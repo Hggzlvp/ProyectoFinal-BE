@@ -1,0 +1,48 @@
+[
+	{
+		"id": "9da13e32-7727-4f7f-8644-f5b119fc36dc",
+		"timestap": "9/11/2022 00:25:33",
+		"productos": [
+			{
+				"id": "cda7d2a9-4ac0-4a1e-8c9d-0dfbddf",
+				"timestamp": "7/11/2022 19:10:00",
+				"title": "Notebook 14´ iQual NQ5 Intel Core i5 4GB 500GB 1080p Windows 10",
+				"description": "Notebook",
+				"cod": 1670,
+				"img": "https://images.fravega.com/f300/7e8226f791298e563819317e562a9d14.jpg.webp",
+				"price": 209000,
+				"stock": 6
+			},
+			{
+				"id": "cda7d2a9-4ac0-4a1e-8c9d-098e65be799b",
+				"timestamp": "7/11/2022 20:17:32",
+				"title": "Notebook Lenovo IdeaPad 14´ 4GB 256GB Core i3",
+				"description": "Notebook",
+				"cod": 1000,
+				"img": "https://images.fravega.com/f300/2cca0c581600f32e27c94ad996696693.jpg.web",
+				"price": 650000,
+				"stock": 7
+			},
+			{
+				"id": "cda7d2a9-4ac0-4a1e-8c9d-0dfbddf",
+				"timestamp": "7/11/2022 19:10:00",
+				"title": "Notebook 14´ iQual NQ5 Intel Core i5 4GB 500GB 1080p Windows 10",
+				"description": "Notebook",
+				"cod": 1670,
+				"img": "https://images.fravega.com/f300/7e8226f791298e563819317e562a9d14.jpg.webp",
+				"price": 209000,
+				"stock": 6
+			},
+			{
+				"id": "cda7d2a9-4ac0-4a1e-8c9d-0dfbddf",
+				"timestamp": "7/11/2022 19:10:00",
+				"title": "Notebook 14´ iQual NQ5 Intel Core i5 4GB 500GB 1080p Windows 10",
+				"description": "Notebook",
+				"cod": 1670,
+				"img": "https://images.fravega.com/f300/7e8226f791298e563819317e562a9d14.jpg.webp",
+				"price": 209000,
+				"stock": 6
+			}
+		]
+	}
+]

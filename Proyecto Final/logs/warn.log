@@ -1,0 +1,72 @@
+[31merror[39m || config is not defined || Feb-02-2023 15:56:03
+[31merror[39m || config is not defined || Feb-02-2023 15:57:39
+[31merror[39m || config is not defined || Feb-02-2023 15:59:14
+[31merror[39m || config is not defined || Feb-02-2023 16:03:03
+[31merror[39m || config is not defined || Feb-02-2023 16:03:56
+[31merror[39m || config is not defined || Feb-02-2023 16:07:20
+[31merror[39m || config is not defined || Feb-02-2023 16:09:41
+[31merror[39m || sendMailEthereal is not defined || Feb-03-2023 15:44:24
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-03-2023 15:44:24
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-03-2023 15:46:04
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-03-2023 15:46:08
+[31merror[39m || Cannot read properties of undefined (reading 'body') || Feb-04-2023 15:50:42
+[31merror[39m || Cannot read properties of undefined (reading 'body') || Feb-04-2023 15:52:24
+[31merror[39m || Cannot read properties of undefined (reading 'body') || Feb-04-2023 15:56:51
+[31merror[39m || Cannot read properties of undefined (reading 'body') || Feb-04-2023 15:59:23
+[31merror[39m || Cannot read properties of undefined (reading 'dest') || Feb-04-2023 16:01:32
+[31merror[39m || Cannot read properties of undefined (reading 'Body') || Feb-04-2023 16:02:45
+[31merror[39m || The 'To' number +18647322916 is not a valid phone number. || Feb-04-2023 16:04:40
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-04-2023 17:09:58
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-04-2023 17:10:24
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-04-2023 17:11:10
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-04-2023 17:13:52
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-04-2023 17:26:25
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-04-2023 17:26:28
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-04-2023 17:27:25
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-04-2023 17:27:28
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-04-2023 17:32:07
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-04-2023 17:32:10
+[31merror[39m || user validation failed: number: Path `number` is required., email: Path `email` is required. || Feb-04-2023 17:32:52
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-04-2023 17:32:56
+[31merror[39m || email is not defined || Feb-04-2023 17:34:25
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-04-2023 17:34:28
+[31merror[39m || email is not defined || Feb-04-2023 17:37:08
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-04-2023 17:37:08
+[31merror[39m || email is not defined || Feb-04-2023 17:38:13
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-04-2023 17:38:13
+[31merror[39m || user validation failed: number: Path `number` is required. || Feb-04-2023 17:39:05
+[31merror[39m || user validation failed: number: Path `number` is required. || Feb-04-2023 17:41:21
+[31merror[39m || user validation failed: number: Path `number` is required. || Feb-04-2023 17:44:03
+[31merror[39m || Illegal arguments: undefined, string || Feb-04-2023 18:06:12
+[31merror[39m || Illegal arguments: undefined, string || Feb-04-2023 18:09:54
+[31merror[39m || Illegal arguments: undefined, string || Feb-04-2023 18:11:47
+[31merror[39m || Illegal arguments: undefined, string || Feb-04-2023 18:18:32
+[31merror[39m || Illegal arguments: undefined, string || Feb-04-2023 18:20:10
+[31merror[39m || Illegal arguments: undefined, string || Feb-04-2023 18:20:59
+[31merror[39m || Illegal arguments: undefined, string || Feb-06-2023 15:24:28
+[31merror[39m || user validation failed: number: Cast to Number failed for value "+54 9 341 311 1014" (type string) at path "number" || Feb-06-2023 16:08:17
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-06-2023 16:08:17
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:08:20
+[31merror[39m || E11000 duplicate key error collection: test.users index: username_1 dup key: { username: "hggz" } || Feb-06-2023 16:08:51
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-06-2023 16:08:51
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:08:53
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:09:06
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:10:27
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:14:36
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:15:36
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:20:24
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:24:48
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 16:26:24
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 17:00:48
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 17:14:06
+[31merror[39m || Invalid From and To pair. From and To should be of the same channel || Feb-06-2023 17:15:10
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 17:22:03
+[31merror[39m || Invalid From and To pair. From and To should be of the same channel || Feb-06-2023 17:22:20
+[31merror[39m || The 'From' number  is not a valid phone number, shortcode, or alphanumeric sender ID. || Feb-06-2023 17:22:21
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 18:11:05
+[31merror[39m || Invalid From and To pair. From and To should be of the same channel || Feb-06-2023 18:11:15
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 18:14:06
+[31merror[39m || Invalid From and To pair. From and To should be of the same channel || Feb-06-2023 18:14:07
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 18:17:05
+[31merror[39m || Invalid From and To pair. From and To should be of the same channel || Feb-06-2023 18:17:06
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 19:34:33
