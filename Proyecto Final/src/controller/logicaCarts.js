@@ -1,14 +1,13 @@
-import { Model } from 'mongoose';
 import { CartModel } from '../models/cart.js';
-import { ProductsModel } from '../models/productos.js';
-import { UserModel } from '../models/user.model.js';
 import {sendMailEthereal} from "../services/email.services.js"
 import { sendSMS,sendWSP } from '../services/twilio.services.js';
+import { buyCartR, createCartR, deleteCartbuyR, deleteCartR, deleteProductByCartR, getAllCartR, getCartByIdR, productsByCartIdR } from '../persistencia/Repository/repostory.js';
 
 
 export const getAllCart = async (req, res) => {
   try {
-    const cart = await CartModel.find();
+    // const cart = await CartModel.find();
+    const cart = await getAllCartR()
     res.json({
       data: cart
     });
@@ -23,7 +22,8 @@ export const getAllCart = async (req, res) => {
 export const getCartById = async (req, res) => {
   try {
     const { id } = req.params;
-    const cart = await CartModel.findById(id)
+    // const cart = await CartModel.findById(id)
+    const cart= await getCartByIdR(id)
     if(!cart)
      return res.status(404).json({
       msg: 'Carrito no encontrado!'
@@ -44,7 +44,8 @@ export const createCart = async (req, res) => {
         timestap:new Date().toLocaleString(),
         productos:[],
     };
-    const cart = await CartModel.create(newCart)
+    // const cart = await CartModel.create(newCart)
+    const cart=await createCartR(newCart)
     // return cart?._id.toString()
 
     res.json({
@@ -61,7 +62,8 @@ export const createCart = async (req, res) => {
 export const deleteCart = async (req, res) => {
   try {
     const {id} = req.params;
-    await CartModel.findByIdAndDelete(id);
+    // await CartModel.findByIdAndDelete(id);
+    await deleteCartR(id)
     res.json({
       msg: 'carrito eliminado correctamente'
     })
@@ -75,7 +77,8 @@ export const deleteCart = async (req, res) => {
 export const deleteCartbuy = async (req, res) => {
   try {
     const {id} = req.params;
-    await CartModel.findByIdAndDelete(id);
+    // await CartModel.findByIdAndDelete(id);
+    await deleteCartbuyR(id)
     res.json({
       msg: 'carrito eliminado correctamente'
     })
@@ -85,24 +88,28 @@ export const deleteCartbuy = async (req, res) => {
     });
   }
 };
-
+//original
 export const deleteProductByCart = async (req, res) => {
       try {
         const idCart=req.params.id;
         const {id}=req.body;
         const idProduct=id;
 
-        const dataCart = await CartModel.findById(idCart);
-
+        // const dataCart = await CartModel.findById(idCart);
+        const dataCart = await deleteProductByCartR(idCart);
         const indexProducto = dataCart.productos.findIndex((itemId) => itemId.id == idProduct)
-
+        
         if (indexProducto < 0) {
           throw "El producto no existe";
         }
 
+        console.log(dataCart.productos,"PRODUCTOS")
+
         dataCart.productos.splice(indexProducto,1)
         
-        await CartModel.create(dataCart)
+        console.log(dataCart.productos,"POST PRODUCTOS")
+
+        await createCartR(dataCart)
 
         res.json({
            msg: `el producto con ${idProduct} fue eliminado del carrito ${idCart}`
@@ -114,6 +121,32 @@ export const deleteProductByCart = async (req, res) => {
       }
 };
 
+// export const deleteProductByCart= async (req,res) => {
+//   try {
+    
+//     const idCart=req.params.id;
+//     const {id}=req.body;
+//     const idProduct=id;
+
+//     // const dataProduct= await ProductsModel.findById(idProduct)
+//     const dataCart = await deleteProductByCartR({idCart,idProduct});
+//     const DC=dataCart.responseProduct
+//     dataCart.responseCart.productos.push(DC)
+    
+
+//     await createCartR(dataCart.responseCart)
+
+//     res.json({
+//       msg: `el producto con ${idProduct} fue borrado del carrito ${idCart}`
+//     })
+
+//   } catch (err) {
+//     res.status(500).json({
+//       error: err.message
+//     });
+//   } 
+// }
+
 export const productsByCartId= async (req,res) => {
   try {
     
@@ -121,12 +154,13 @@ export const productsByCartId= async (req,res) => {
     const {id}=req.body;
     const idProduct=id;
 
-    const dataCart = await CartModel.findById(idCart)
-    const dataProduct= await ProductsModel.findById(idProduct)
+    // const dataProduct= await ProductsModel.findById(idProduct)
+    const dataCart = await productsByCartIdR({idCart,idProduct});
+    
+    const DC=dataCart.responseProduct
+    dataCart.responseCart.productos.push(DC)
 
-    dataCart.productos.push(dataProduct)
-
-    await CartModel.create(dataCart)
+    await createCartR(dataCart.responseCart)
 
     res.json({
       msg: `el producto con ${idProduct} fue agregado al carrito ${idCart}`
@@ -143,11 +177,13 @@ export const buyCart= async (req,res) => {
   try {
     
   const idCart=req.params.id;
-  const dataCart = await CartModel.findById(idCart)
+  // const dataCart = await CartModel.findById(idCart)
+  const dataCart = await buyCartR(idCart);
   const nombresProductos= dataCart.productos.map(x => x.name)
     
   await sendMailEthereal("Compra de pepito",nombresProductos.toLocaleString())
   // await CartModel.findByIdAndDelete(idCart);
+  await deleteCartR(idCart)
   
   await sendSMS(`su lista de productos es:${nombresProductos}`)
   await sendWSP(`su lista de productos es:${nombresProductos}`)

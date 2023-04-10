@@ -1,11 +1,12 @@
 import express from 'express';
+import cors from "cors"
 import mainRouter from './routes/index.js';
 import session from 'express-session';
 import passport from 'passport';
 import { loginFunc, signUpFunc } from './services/auth.js';
 import MongoStore from 'connect-mongo';
 import Config from './config/index.js';
-import { initDb } from './db/database.js';
+// import { initDb } from './db/database.js';
 import { logger } from './utils/logger.js';
 
 import * as dotenv from 'dotenv';
@@ -13,10 +14,18 @@ import { args } from "./config/proces.config.js";
 import cluster from "cluster"
 import os from "os"
 
+//SWAGGER
+import { info } from "../src/docs/index.js"
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUI from "swagger-ui-express"
+
 const app = express();
 
-// app.use(express.json());
+const specs=swaggerJSDoc(info)
+
 //settings
+app.use("/docs",swaggerUI.serve,swaggerUI.setup(specs))
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'));
@@ -57,8 +66,8 @@ if (modo === "cluster" && cluster.isPrimary) {
   });
 } else {
 
-await initDb();
-logger.info('Conectado a la DB!');
+// await initDb();
+// logger.info('Conectado a la DB!');
 
 passport.use('login', loginFunc);
 passport.use('signup', signUpFunc);

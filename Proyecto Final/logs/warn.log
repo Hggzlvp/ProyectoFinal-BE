@@ -70,3 +70,191 @@
 [31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 18:17:05
 [31merror[39m || Invalid From and To pair. From and To should be of the same channel || Feb-06-2023 18:17:06
 [31merror[39m || Invalid login: 535 Authentication failed || Feb-06-2023 19:34:33
+[31merror[39m || newUser.encryptPassword is not a function || Feb-20-2023 19:18:36
+[31merror[39m || newUser.encryptPassword is not a function || Feb-21-2023 15:52:45
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-21-2023 15:52:48
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-21-2023 15:52:48
+[31merror[39m || newUser.encryptPassword is not a function || Feb-21-2023 15:54:36
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-21-2023 15:54:38
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-21-2023 15:54:38
+[31merror[39m || newUser.encryptPassword is not a function || Feb-21-2023 15:54:47
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-21-2023 15:54:49
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-21-2023 15:54:49
+[31merror[39m || newUser.encryptPassword is not a function || Feb-21-2023 16:02:18
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-21-2023 16:02:20
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-21-2023 16:02:20
+[31merror[39m || newUser.encryptPassword is not a function || Feb-21-2023 16:05:16
+[31merror[39m || Invalid login: 535 Authentication failed || Feb-21-2023 16:05:18
+[31merror[39m || Cannot set headers after they are sent to the client || Feb-21-2023 16:05:18
+[31merror[39m || Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/ || Mar-01-2023 16:24:17
+[31merror[39m || Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/ || Mar-01-2023 16:32:21
+[31merror[39m || product validation failed: name: Cast to string failed for value "{
+  name: undefined,
+  description: undefined,
+  stock: undefined,
+  price: undefined,
+  categoryId: undefined
+}" (type Object) at path "name", description: Path `description` is required., price: Path `price` is required., stock: Path `stock` is required., categoryId: Path `categoryId` is required. || Mar-01-2023 23:00:28
+[31merror[39m || product validation failed: name: Cast to string failed for value "{
+  name: 'NNNNNNNNN ',
+  description: 'Notebo44ok',
+  stock: 46,
+  price: 2444444000,
+  categoryId: '6388070953576b9c550aa2db'
+}" (type Object) at path "name", description: Path `description` is required., price: Path `price` is required., stock: Path `stock` is required., categoryId: Path `categoryId` is required. || Mar-01-2023 23:14:27
+[31merror[39m || product validation failed: name: Cast to string failed for value "{
+  name: 'NNNNNNNNN ',
+  description: 'Notebo44ok',
+  stock: 46,
+  price: 2444444000,
+  categoryId: '6388070953576b9c550aa2db'
+}" (type Object) at path "name", description: Path `description` is required., price: Path `price` is required., stock: Path `stock` is required., categoryId: Path `categoryId` is required. || Mar-01-2023 23:19:06
+[31merror[39m || Cast to ObjectId failed for value "63dea8a02efd2b0db132c4cc\n" (type string) at path "_id" for model "cart" || Mar-01-2023 23:48:06
+[31merror[39m || read ECONNRESET || Mar-02-2023 22:04:48
+[31merror[39m || Operation `carts.findOne()` buffering timed out after 10000ms || Mar-03-2023 14:16:18
+[31merror[39m || Operation `carts.findOne()` buffering timed out after 10000ms || Mar-03-2023 14:23:56
+[31merror[39m || Operation `carts.findOne()` buffering timed out after 10000ms || Mar-03-2023 14:26:14
+[31merror[39m || read ECONNRESET || Mar-03-2023 14:26:42
+[31merror[39m || cart validation failed: timestap: Method Date.prototype.toLocaleString called on incompatible receiver [object Object] || Mar-03-2023 14:27:52
+[31merror[39m || cart validation failed: timestap: Method Date.prototype.toLocaleString called on incompatible receiver [object Object] || Mar-03-2023 14:32:01
+[31merror[39m || cart validation failed: timestap: Method Date.prototype.toLocaleString called on incompatible receiver [object Object] || Mar-03-2023 14:35:42
+[31merror[39m || cart validation failed: timestap: Method Date.prototype.toLocaleString called on incompatible receiver [object Object] || Mar-03-2023 14:38:41
+[31merror[39m || cart validation failed: timestap: Method Date.prototype.toLocaleString called on incompatible receiver [object Object] || Mar-03-2023 14:41:56
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-03-2023 17:40:17
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: undefined, description: undefined }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 17:47:39
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: undefined, description: undefined }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 17:50:31
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: undefined, description: undefined }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 17:55:32
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: undefined, description: undefined }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 17:56:59
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: undefined, description: undefined }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 17:59:58
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: undefined, description: undefined }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 18:03:03
+[31merror[39m || category validation failed: name: Path `name` is required., description: Path `description` is required. || Mar-03-2023 18:05:22
+[31merror[39m || category validation failed: name: Path `name` is required., description: Path `description` is required. || Mar-03-2023 18:07:24
+[31merror[39m || category validation failed: name: Path `name` is required., description: Path `description` is required. || Mar-03-2023 18:09:03
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: undefined, description: 'alta gama' }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 18:13:15
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: 'telefonos', description: 'alta gama' }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 18:13:30
+[31merror[39m || category validation failed: name: Cast to string failed for value "{ name: 'telefonos', description: 'alta gama' }" (type Object) at path "name", description: Path `description` is required. || Mar-03-2023 18:14:16
+[31merror[39m || Cast to string failed for value "{ name: 'phone', description: 'high-end' }" (type Object) at path "name" || Mar-03-2023 18:43:11
+[31merror[39m || Cast to string failed for value "{ name: 'phone', description: 'high-end' }" (type Object) at path "name" || Mar-03-2023 19:23:15
+[31merror[39m || Cast to string failed for value "{ name: 'telefono', description: 'alta gama' }" (type Object) at path "name" || Mar-03-2023 19:24:52
+[31merror[39m || Cast to string failed for value "{ name: 'telefono', description: 'alta gama' }" (type Object) at path "name" || Mar-03-2023 19:26:30
+[31merror[39m || Cast to string failed for value "{ name: 'telefono', description: 'alta gama' }" (type Object) at path "name" || Mar-03-2023 19:27:41
+[31merror[39m || Cast to ObjectId failed for value "{ id: undefined, name: undefined, description: undefined }" (type Object) at path "_id" for model "category" || Mar-03-2023 19:42:29
+[31merror[39m || product validation failed: name: Cast to string failed for value "{
+  name: 'Notebook 14´ iQual NQ58888888888 ',
+  description: 'lllllllllllok',
+  stock: 90,
+  price: 9999,
+  categoryId: '6388070953576b9c550aa2db'
+}" (type Object) at path "name", description: Path `description` is required., price: Path `price` is required., stock: Path `stock` is required., categoryId: Path `categoryId` is required. || Mar-03-2023 22:08:43
+[31merror[39m || product validation failed: name: Cast to string failed for value "{
+  name: 'NQ58888888888 ',
+  description: 'lllllllllllok',
+  stock: 90,
+  price: 9999,
+  categoryId: '6388070953576b9c550aa2db'
+}" (type Object) at path "name", description: Path `description` is required., price: Path `price` is required., stock: Path `stock` is required., categoryId: Path `categoryId` is required. || Mar-03-2023 22:08:55
+[31merror[39m || product validation failed: name: Cast to string failed for value "{
+  name: 'NQ58888888888 ',
+  description: 'lllllllllllok',
+  stock: 90,
+  price: 9999,
+  categoryId: '6388070953576b9c550aa2db'
+}" (type Object) at path "name", description: Path `description` is required., price: Path `price` is required., stock: Path `stock` is required., categoryId: Path `categoryId` is required. || Mar-04-2023 12:18:47
+[31merror[39m || Callback must be a function, got [object Object] || Mar-04-2023 14:09:37
+[31merror[39m || Callback must be a function, got [object Object] || Mar-04-2023 14:11:15
+[31merror[39m || Cast to ObjectId failed for value "{ id: undefined, name: undefined, description: undefined }" (type Object) at path "_id" for model "category" || Mar-04-2023 14:12:19
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:00:02
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:00:05
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:00:05
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:03:43
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:03:45
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:03:45
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:06:00
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:06:03
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:06:03
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:08:06
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:08:08
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:08:08
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:09:16
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:09:18
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:09:18
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:09:22
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:09:24
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:09:24
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:09:54
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:09:56
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:09:56
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:12:24
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:12:26
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:12:26
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:14:43
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:14:46
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:14:46
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:17:58
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:18:00
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:18:00
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:19:31
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:19:33
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:19:33
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:22:21
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:22:24
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:22:24
+[31merror[39m || newUser.encryptPassword is not a function || Mar-04-2023 15:31:05
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 15:31:08
+[31merror[39m || Cannot set headers after they are sent to the client || Mar-04-2023 15:31:08
+[31merror[39m || Cast to string failed for value "{ username: 'Ernesto el CHE guevara' }" (type Object) at path "username" for model "user" || Mar-04-2023 16:09:40
+[31merror[39m || Cast to string failed for value "{ username: 'Ernesto el CHE guevara' }" (type Object) at path "username" for model "user" || Mar-04-2023 16:10:23
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-04-2023 18:38:57
+[31merror[39m || Operation `carts.findOne()` buffering timed out after 10000ms || Mar-05-2023 11:45:55
+[31merror[39m || Cast to ObjectId failed for value "{ id: undefined, name: undefined, description: undefined, new: true }" (type Object) at path "_id" for model "category" || Mar-05-2023 18:54:53
+[31merror[39m || Cast to ObjectId failed for value "{ id: undefined, name: undefined, description: undefined }" (type Object) at path "_id" for model "category" || Mar-05-2023 18:56:48
+[31merror[39m || Cast to ObjectId failed for value "{ id: undefined, name: undefined, description: undefined, new: true }" (type Object) at path "_id" for model "category" || Mar-05-2023 18:59:07
+[31merror[39m || Cast to string failed for value "{ name: 'telefono', description: 'high-end' }" (type Object) at path "name" || Mar-05-2023 19:06:50
+[31merror[39m || Cast to string failed for value "{ name: 'telefono', description: 'high-end' }" (type Object) at path "name" || Mar-06-2023 14:52:02
+[31merror[39m || Cast to string failed for value "{ name: 'telefono', description: 'high-end' }" (type Object) at path "name" || Mar-06-2023 14:57:45
+[31merror[39m || Cast to ObjectId failed for value "{
+  id: '63d70d8a49838059ec7276ce',
+  name: 'aaaaaa ',
+  description: 'aaaaa',
+  stock: 666,
+  price: 66666,
+  categoryId: '6388070953576b9c550aa2db'
+}" (type Object) at path "_id" for model "product" || Mar-06-2023 15:24:36
+[31merror[39m || Cast to ObjectId failed for value "{
+  id: '63d70d8a49838059ec7276ce',
+  name: 'aaaaaa ',
+  description: 'aaaaa',
+  stock: 666,
+  price: 66666,
+  categoryId: undefined
+}" (type Object) at path "_id" for model "product" || Mar-06-2023 15:31:36
+[31merror[39m || Cast to ObjectId failed for value "{
+  id: '63d70d8a49838059ec7276ce',
+  name: 'aaaaaa ',
+  description: 'aaaaa',
+  stock: 666,
+  price: 66666
+}" (type Object) at path "_id" for model "product" || Mar-06-2023 15:33:34
+[31merror[39m || Cast to ObjectId failed for value "{
+  id: '63d70d8a49838059ec7276ce',
+  name: 'aaaaaa ',
+  description: 'aaaaa',
+  stock: 666,
+  price: 66666
+}" (type Object) at path "_id" for model "product" || Mar-06-2023 15:35:54
+[31merror[39m || Operation `products.findOne()` buffering timed out after 10000ms || Mar-06-2023 15:37:51
+[31merror[39m || Cast to ObjectId failed for value "{
+  id: '63d70d8a49838059ec7276ce',
+  name: 'aaaaaa ',
+  description: 'aaaaa',
+  stock: 666,
+  price: 66666
+}" (type Object) at path "_id" for model "product" || Mar-06-2023 15:38:28
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-18-2023 15:25:35
+[31merror[39m || product validation failed: categoryId: Cast to ObjectId failed for value "ObjetcId("63d70cb949838059ec7276cc")" (type string) at path "categoryId" because of "BSONTypeError" || Mar-18-2023 20:11:06
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-18-2023 20:30:40
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-18-2023 20:51:28
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-18-2023 20:53:30
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-18-2023 20:53:46
+[31merror[39m || Cast to ObjectId failed for value "{ idCart: undefined, idProduct: undefined }" (type Object) at path "_id" for model "cart" || Mar-28-2023 13:28:29
+[31merror[39m || Invalid login: 535 Authentication failed || Mar-28-2023 15:44:41

@@ -1,0 +1,491 @@
+openapi: 3.0.0
+
+info:
+  title: E-commerce
+  description: Entrega del proyecto final de CoderHouse
+  version: 1.0.0
+
+servers:
+  - url: 'http://localhost:8080/api'
+    description: Servidor Local
+  - url: http://paginaparadeployar/api.com
+    description: Servidor de produccion
+    
+components:
+  schemas:
+   cart:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "6402574691062b1f1c7ce22f"
+        timestap:
+          type: string
+          example: "4/2/2023 15:49:04"
+        productos:
+          type: array
+          items: 
+            $ref: '#/components/schemas/products'
+      required:  
+        - id
+        - timestap
+        - productos
+   categorys:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 5234g5234g52352234
+        name:
+          type: string
+          example: Computadoras
+        description:
+          type: string
+          example: notebooks
+      required:  
+        - id
+        - name
+        - description
+   products:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Notbook Iqual4
+        description:
+          type: string
+          example: notebook
+        price:
+          type: number
+          example: 300
+        stock:
+          type: number
+          example: 50
+        categoryId:
+          type: string
+          example: "63d70cb949838059ec7276cc"
+      required:  
+        - name
+        - description
+        - price
+        - stock
+        - categoryId
+   users:
+      type: object
+      properties:
+        username:
+          type: string
+          example: Arthur Dent
+        password:
+          type: string
+          example: fasfasdfa9ds87f9898
+        email:
+          type: string
+          example: sdasda@gmail.com
+        number:
+          type: number
+          example: 3413141514
+        admin:
+          type: boolean
+          example: true
+      required: 
+        - username
+        - password
+        - email
+        - number
+        - admin
+   LoginUsers:
+      type: object
+      properties:
+        username:
+          type: string
+          example: Arthur Dent
+        password:
+          type: string
+          example: fasfasdfa9ds87f9898
+        admin:
+          type: boolean
+          example: true
+      required: 
+        - username
+        - password
+        - admin
+   id:
+      properties:
+        id:
+          type: string
+          example: 63d70cb949838059ec7276cc
+      required:  
+        - id
+   bodyCreateCategory:
+      properties:
+        name:
+          type: string
+          example: computadoras
+        description:
+          type: string
+          example: notebooks
+      required:  
+        - name
+        - description
+    
+paths:
+# ----------------CARTS-----------------
+  /carrito:
+    get:
+      tags:
+       - CART
+      summary: GetAllCarts
+      description: Muestra todos los carritos de la base de datos
+      responses:
+        '200':  # status code
+          description: ¡ CARRITOS DISPONIBLES !
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/cart'
+    post:
+      tags:
+       - CART
+      summary: CreateCart
+      description: Muestra el carrito creado
+      responses:
+        '200':
+          description: ¡ CARRITO CREADO CON EXITO !
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/cart'
+  /carrito/{id}:
+    get:
+      tags:
+       - CART
+      summary: GetCartById
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':  # status code
+          description: ¡ CARRITO ENCONTRADO !
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/cart'
+    delete:
+      tags:
+       - CART
+      summary: deleteCartById
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':  # status code
+           description: ¡ CART DELETE !
+        '404':
+           description: ¡ CART NOT FOUND !
+    post:
+      tags:
+       - CART
+      summary: ProductsCartById
+      requestBody:
+        required: true
+        description: ID PRODUCT
+        content:
+          application/json:
+            schema:
+              type: string
+              $ref: '#/components/schemas/id'
+              
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          description: ID CART
+          required: true
+      responses:
+        '200':  # status code
+          description: ¡ Product add cart successfully !
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/cart'
+  # arreglar
+  /carrito/{id}/productos:
+    delete:
+      tags:
+      - CART
+      summary: deleteProductByCart
+      requestBody:
+        required: true
+        description: ID PRODUCT
+        content:
+          application/json:
+            schema:
+              type: string
+              $ref: '#/components/schemas/id'
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          description: ID CART
+          required: true
+      responses:
+        '200':  # status code
+          description: ¡ Product delete cart successfully !
+  /carrito/{id}/compra:
+    get:
+      tags:
+       - CART
+      summary: GetCartBuy
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':  # status code
+          description: ¡ CARRITO PROCESADO !
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/cart'
+
+# ----------------CATEGORYS-----------------
+  
+  /categorias:
+    get:
+      tags:
+       - CATEGORYS
+      summary: GetAllCategorys
+      description: Muestra todas las categorias de la base de datos
+      responses:
+         '200':
+           description: ¡ CATEGORIAS DISPONIBLES !
+           content:
+             application/json:
+               schema:
+                 $ref: '#/components/schemas/categorys'
+    post:
+      tags:
+       - CATEGORYS
+      summary: CreateCategory
+      requestBody:
+        required: true
+        description: Nombre y descripcion
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/bodyCreateCategory'
+      responses:
+        '200':
+          description: ¡ CARRITO CREADO CON EXITO !
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/categorys'
+  /categorias/{id}:
+    get:
+      tags:
+       - CATEGORYS
+      summary: GetCategoryById
+      description: Muestra la categorias seleccionada por id
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: ¡ CATEGORIA DISPONIBLE !
+          content:
+            application/json:
+                schema:
+                 $ref: '#/components/schemas/categorys'
+    delete:
+      tags:
+       - CATEGORYS
+      summary: deleteCategory
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':  # status code
+           description: ¡ CATEGORY DELETE !
+        '404':
+           description: ¡ CATEGORY NOT FOUND !
+    put:
+      tags:
+      - CATEGORYS
+      summary: updateCategory
+      requestBody:
+        required: true
+        description: nombre y descripcion nueva
+        content:
+          application/json:
+            schema:
+              type: string
+              $ref: '#/components/schemas/bodyCreateCategory'
+      parameters:
+        - in: path
+          name: id
+          schema: 
+            type: string
+          required: true
+      responses:
+        '200':
+          description: ¡ CATEGORIA ACTUALIZADA ! ----NO ANDA
+    
+# ----------------PRODUCTS------------------     
+  
+  /productos:
+    get:
+      tags:
+       - PRODUCTS
+      summary: GetAllProducts
+      description: Muestra todos los productos de la base de datos
+      responses:
+         '200':
+           description: ¡ PRODUCTOS DISPONIBLES !
+           content:
+             application/json:
+               schema:
+                 $ref: '#/components/schemas/products'
+    post:
+      tags:
+       - PRODUCTS
+      summary: CreateProduct
+      requestBody:
+        required: true
+        description: Ingresar producto nuevo
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/products'
+      responses:
+        '200':
+          description: ¡ PRODUCTO CREADO CON EXITO !
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/products'
+  /productos/{id}:
+    get:
+      tags:
+       - PRODUCTS
+      summary: GetProductById
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':  # status code
+          description: ¡ PRODUCTO ENCONTRADO !
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: '#/components/schemas/products'
+    delete:
+      tags:
+       - PRODUCTS
+      summary: deleteProductById
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':  # status code
+           description: ¡ PRODUCT DELETE !
+        '404':
+           description: ¡ PRODUCT NOT FOUND !
+    put:
+      tags:
+      - PRODUCTS
+      summary: updateProduct
+      requestBody:
+        required: true
+        description: Ingresar producto nuevo
+        content:
+          application/json:
+            schema:
+              type: string
+              $ref: '#/components/schemas/products'
+      parameters:
+        - in: path
+          name: id
+          schema: 
+            type: string
+          required: true
+      responses:
+        '200':
+          description: ¡ PRODUCTO ACTUALIZADO ! ----NO ANDA
+    
+#-----------------USERS---------------------
+  
+  /users/signup:
+    post:
+      tags:
+       - USERS
+      summary: SignUp
+      requestBody:
+        required: true
+        description: Ingresar Datos
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/users'
+      responses:
+        '200':
+          description: ¡ REGISTRADO EXITO !
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/users'
+  /users/login:
+    post:
+      tags:
+       - USERS
+      summary: Login
+      requestBody:
+        required: true
+        description: Ingresar Usuario
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginUsers'
+      responses:
+        '200':
+          description: ¡ LOGEADO EXITO !
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginUsers'
+  /users/home:
+    get:
+      tags:
+       - USERS
+      summary: Home
+      description: Muestra la pagina principal
+      responses:
+         '200':
+           description: ¡ Bienvenido a la pagina principal !

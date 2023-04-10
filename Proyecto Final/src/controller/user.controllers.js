@@ -33,21 +33,11 @@ export const login = (req, res,next) => {
         if(!user){
             return res.status(401).json(info)
         }
-        if(req.user){
-            const username = req.user
-            currentUser.name = username.name
-            currentUser.number = username.number
-            currentUser.email = username.email
-            res.json({
-                msg: `Bienvenido, ${username.name}`
-            })
-
-        }
     } )(req,res,next)
 
 
 
-    // res.json({ msg: 'Bienvenido!', user: req.user });
+    res.json({ msg: 'Bienvenido!', user: req.user });
 }
 
 export const getHome = (req, res) => {
